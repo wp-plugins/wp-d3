@@ -17,19 +17,20 @@ Enjoy!.
 == Installation ==
 1. Upload `wp-d3/` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Add the tags [d3-link][/d3-link].
-3. If your code depends on .js, .css, .json third files:
+3. Edit your page/post in Text mode (to avoid replacement of '<' and '>')
+4. Add the tags [d3-link][/d3-link].
+5. If your code depends on .js, .css, .json third files:
     Click between the tags to place the mouse cursor.
     Add the deps files through 'Add Media' button, select them, and then click on 'Insert into page'.
     The returned links should be now between the tags [d3-link] and [/d3-link] tags. 
     Example: [d3-link]
              <a href="http://figurebelow.com/wp-content/uploads/2013/02/mixes.js">mixes</a>
              [/d3-link]
-4. Paste your d3 code between [d3-source] and [/d3-source] tags.
+6. Paste your d3 code between [d3-source] and [/d3-source] tags.
    Yoy can specify the canvas name, where the code is placed, adding the 'canvas' parameter e.g. [d3-source canvas="xxx"], 
    where xxx is the canvas name. The default id is "canvas".
-5. Save the post/page.
-6. Enjoy!
+7. Save the post/page.
+8. Enjoy!
 
 == Frequently Asked Questions == 
 Lets wait until next version.
