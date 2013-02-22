@@ -39,7 +39,8 @@ Lets wait until next version.
 * Update Wordpress-d3 to version 1.0, first implementation.
 
 == Screenshots ==
-1. Live example <a href="http://figurebelow.com/d3/santander-shares-2012/">here</a>
+
+1.Live example <a href="http://figurebelow.com/d3/santander-shares-2012/">here</a>
 
 == Changelog ==
 = 1.0.0 =
