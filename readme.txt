@@ -3,8 +3,8 @@ Contributors: Ruben Afonso<ruben@figurebelow.com>
 Donate link: http://www.figurebelow.com
 Tags: d3, visualization, javascript
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.0.0
+Tested up to: 3.5
+Stable tag: 1.1
 
 A plugin to integrate D3 into your Wordpress post/pages.
 == Description ==
@@ -45,4 +45,6 @@ Lets wait until next version.
 == Changelog ==
 = 1.0.0 =
 * First commit. Basic tag functionality, [d3-link], [d3 canvas="canvas"]
+= 1.1 =
+* Fixed d3 snippet insertion, now the code output is shown where it has been inserted inside the post.
 
