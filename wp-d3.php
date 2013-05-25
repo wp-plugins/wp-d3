@@ -26,23 +26,22 @@ function include_resources ($attr, $content) {
 	echo '<script type="text/javascript" src=\'' . plugins_url('/js/d3.v3.js', __FILE__) . '\'></script>';
 	$hrefs = array();
 	$dom = new DOMDocument();
-	$dom->loadHTML($content);
-	$tags = $dom->getElementsByTagName('a');
-	foreach ($tags as $tag) {
-       		$hrefs[] =  $tag->getAttribute('href');
-	}
-	foreach ($hrefs as $js)
-	{
-	  if (substr_compare($js, "js", -strlen("js"), strlen("js")) === 0)
-	  {
-	     echo '<script type="text/javascript" ';
-             echo 'src=\'' . $js . '\'></script>';
-	  }
-          if (substr_compare($js, "css", -strlen("css"), strlen("css")) === 0)
-	  {
-	     echo '<link type="text/css" rel="Stylesheet" ';
-             echo 'href=\'' . $js . '\'/>';
-	  }
+	if (!empty($content)) {
+		$dom->loadHTML($content);
+		$tags = $dom->getElementsByTagName('a');
+		foreach ($tags as $tag) {
+       			$hrefs[] =  $tag->getAttribute('href');
+		}
+		foreach ($hrefs as $js) {
+	  		if (substr_compare($js, "js", -strlen("js"), strlen("js")) === 0) {
+	     			echo '<script type="text/javascript" ';
+	             		echo 'src=\'' . $js . '\'></script>';
+			}
+          		if (substr_compare($js, "css", -strlen("css"), strlen("css")) === 0) {
+	     			echo '<link type="text/css" rel="Stylesheet" ';
+             			echo 'href=\'' . $js . '\'/>';
+	  		}
+		}
 	}
 }
 
@@ -56,17 +55,19 @@ function print_source ($attr, $content) {
 	      'canvas' => 'canvas'), $attr));
 	$chart = $canvas;
   $result = '<div class="' . $chart . '">' . '<script type="text/javascript">' . $content . '</script>' . '</div>';
-  return str_replace("\r\n", '', $result); // remove any newline because worpress may convert it to <p> tags
+  return $result;
 }
 
 add_action('init', 'wordpressd3_init');
+
 add_shortcode("d3-link", "include_resources");
 add_shortcode("d3-source", "print_source");
 
 // Remove WordPress auto-p and wptexturize from being executed before wordpress-d3
-remove_filter('the_content', 'wpautop' );
 remove_filter('the_content', 'wptexturize');
+remove_filter('the_content', 'wpautop' );
 // and added again with less priority
-add_filter( 'the_content', 'wpautop' , 99);
-add_filter( 'the_content', 'wptexturize' , 99);
+// add_filter( 'the_content', 'wpautop' , 99);
+//add_filter( 'the_content', 'wptexturize' , 99);
 ?>
+
