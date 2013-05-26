@@ -5,6 +5,7 @@ Tags: d3, visualization, javascript
 Requires at least: 3.0
 Tested up to: 3.5
 Stable tag: 1.1
+License: GPL2
 
 A plugin to integrate D3 into your Wordpress post/pages.
 == Description ==
