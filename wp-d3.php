@@ -77,7 +77,7 @@ add_action('init', 'wordpressd3_init');
 add_shortcode("d3-link", "include_resources");
 add_shortcode("d3-source", "print_source");
 
-// and added again with less priority, this doesn't seems
+// and added again with less priority.
 add_filter( 'the_content', 'wpautop' , 99);
 add_filter( 'the_content', 'wptexturize' , 99);
 ?>
