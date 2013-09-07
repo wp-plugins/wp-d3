@@ -52,5 +52,5 @@ Lets wait until next version.
 * Fixed bug that provoked wpautop and wptexturize to be disabled permanently.
 * Fixed d3-link include's generation.
 * Added filter to avoid wptexturize messing the [d3-source] content.
-* Updated D3 shipped version to last 3.3.
+* Updated D3 shipped version to last 3.3.3
 * The plugin now uses the lighter d3.v3.min.js (instead of d3.v3.js).
