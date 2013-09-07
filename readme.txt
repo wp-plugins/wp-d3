@@ -1,4 +1,4 @@
-=== Wp-D3 ===
+﻿=== Wp-D3 ===
 Contributors: Ruben Afonso<ruben@figurebelow.com>
 Donate link: http://www.figurebelow.com
 Tags: d3, visualization, javascript
@@ -53,4 +53,4 @@ Lets wait until next version.
 * Fixed d3-link include's generation.
 * Added filter to avoid wptexturize messing the [d3-source] content.
 * Updated D3 shipped version to last 3.3.
-* The plugin now used the lighter d3.v3.min.js (instead of d3.v3.js).
+* The plugin now uses the lighter d3.v3.min.js (instead of d3.v3.js).
