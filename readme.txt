@@ -48,4 +48,9 @@ Lets wait until next version.
 * First commit. Basic tag functionality, [d3-link], [d3 canvas="canvas"]
 = 1.1 =
 * Fixed d3 snippet insertion, now the code output is shown where it has been inserted inside the post.
-
+= 1.2 =
+* Fixed bug that provoked wpautop and wptexturize to be disabled permanently.
+* Fixed d3-link include's generation.
+* Added filter to avoid wptexturize messing the [d3-source] content.
+* Updated D3 shipped version to last 3.3.
+* The plugin now used the lighter d3.v3.min.js (instead of d3.v3.js).
