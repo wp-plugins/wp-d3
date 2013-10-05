@@ -97,6 +97,5 @@ add_filter( 'the_content', 'wptexturize' , 90);
  * Added with even less priority to make sure it's executed at the end
  * so the ampersands are restored.
  */
-#add_filter ('the_content', 'restore_special_chars', 95);
+add_filter ('the_content', 'restore_special_chars', 95);
 ?>
-
