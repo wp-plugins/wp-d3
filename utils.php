@@ -43,14 +43,14 @@ function getCustomFielContent ()
 {
 	$postId = $_REQUEST["postId"];
 	$val = get_post_custom_keys($postId);
-	$varStr = "";
 	$keys = array();
 	$contents = array();
 	foreach ($val as $var) {
 		if (preg_match("/wpd3-/", $var))
 		{
-			array_push($keys, $var);
-			array_push($contents, get_post_custom_values($var, $postId)[0]);
+      array_push($keys, $var);
+      $values = get_post_custom_values($var, $postId);
+			array_push($contents, $values[0]);
 		}
 	}
     $response = array(
